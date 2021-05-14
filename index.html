@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/hospitalisations.js"></script>
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <title>Gestion des hospitalisation</title>
+</head>
+<body onload="afficherPatient(); afficherEtablis(); afficherListehospi(); chargerDossier();chargeretablisem(); afficherHospitaParPatient(); afficherHospitaParEtabliSpeciali()">
+    
+    <header>
+        <div class="logoDiv">
+            <div class="logo">
+                <img style="width: 100px;" src="assets/logo/logo.svg" alt="logo">
+                <h1>Gestion des hospitalisations</h1>
+            </div>
+        </div>
+    </header>
+    <div class="divMenu">
+        <nav >
+            <ul class="ulMenu">
+                <li><a onclick="montrer(0)" class="linkMenu" ><img class="iconMenu icon" src="assets/icons/contact.png" alt="icone"> Liste de patients</a></li>
+                <li><a onclick="montrer(1)" class="linkMenu" ><img class="iconMenu icon" src="assets/icons/établissement.png" alt="icone"> Liste des établissements</a></li>
+                <li><a onclick="montrer(2)" class="linkMenu" ><img class="iconMenu icon" src="assets/icons/liste.png" alt="icone"> Liste des hospitalisations</a></li>
+                <li><a onclick="montrer(3)" class="linkMenu" ><img class="iconMenu icon" src="assets/icons/hospitalisations.png" alt="icone"> Hospitalisation par patient</a></li>
+                <li><a onclick="montrer(4)" class="linkMenu" ><img class="iconMenu icon" src="assets/icons/hosp_spécialité.png" alt="icone"> Hosp. par établissement et spécialité</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div >
+        <!-- zone d'affichage -->
+        <div class="divTable" id="0">
+            <table id="tbliste">
+            </table>
+            <a><img onclick="cacher(0)" style="width: 35px;" src="assets/icons/fermer.png" alt="Fermer"></a>
+        </div>
+        <div class="divTable" id="1">
+            <table id="tbetablis">
+            </table>
+            <a><img onclick="cacher(1)" style="width: 35px;" src="assets/icons/fermer.png" alt="Fermer"></a>
+        </div>
+        <div class="divTable" id="2">
+            <table id="tbetabhosp">
+            </table>
+            <a><img onclick="cacher(2)" style="width: 35px;" src="assets/icons/fermer.png" alt="Fermer"></a>
+        </div>
+        <div class="divTable" id="3">
+            <div class="align_items select" style="padding-bottom: 1rem;" id="selectParPatient">
+                <p style="font-size: 1rem">Choisissez le numéro de dossier:</p>
+                <select class="divSelDossier" onchange="tri()" id="dossiers"></select>
+            </div>
+            <table class="tableHospPatient" id="tbetabhospParPatient">
+            </table>
+            <a><img onclick="montrer(3)" style="width: 35px;" src="assets/icons/fermer.png" id="fermer" alt="Fermer"></a>
+        </div>
+        <div class="divTable" id="4">
+            <div class="align_items select column" id="selectParEtabliSpecia">
+                <p class="font-size">Sélectionner le numéro d'établissement:</p>
+                <select class="etabli" onchange="triEtabli()" id="etablises"></select>
+                <p class="font-size">Sélectionner la specialié: <br><i>(Nota bene: Seules les specialités présentes dans nos dossiers pour cet établissement apparaissant dans la liste déroulante.)</i> </p>
+                <select class="etabli" onchange="trispecia()" id="specialite"></select>
+            </div>
+            <table class="tableHospPatient" id="tbetabhospParEtabliSpecialit">
+            </table>
+            <a><img onclick="montrer(4)" style="width: 35px;" src="assets/icons/fermer.png" id="fermerEtabli" alt="fermer"></a>
+        </div>
+    </div>
+    <footer>
+        <div class="divFooter">
+            <img style=" width: 38px;" src="assets/icons/attention.png" alt="Attention">
+            <p id="message" style="margin-left: 10px;">Les messages d'erreur ou de confirmation apparaîtront ici.</p>
+        </div>
+    </footer>
+</body>
+</html>

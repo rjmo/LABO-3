@@ -1,0 +1,160 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../assets/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f7f8fa;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    transition: ease-in-out 0.2s ;
+}
+a:hover {
+    transition: ease-in-out 0.2s ;
+    margin-top: -7px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.linkMenu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+}
+
+nav {
+    width: 97vw; 
+}
+
+.logoDiv {
+    background-image: url(../assets/images/banner.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff6f675;
+    box-shadow: 0px -7px 7px 6px black; 
+}
+
+.logo {
+    display: flex; 
+    align-items: center; 
+    margin-left: 3.9%;
+}
+
+.iconMenu {
+    padding-bottom: 13px;
+}
+
+.ulMenu {
+    display: flex;  
+    list-style-type: none; 
+    justify-content: space-between;
+}
+
+.icon {
+    width: 37px;
+}
+
+footer {
+    background-color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(236, 236, 236);
+    width: 100%;
+    margin-top: 1.5%;
+}
+
+.divFooter {
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}
+
+.divMenu {
+    border-bottom: 1px solid rgb(207, 207, 207); 
+    position: sticky; 
+    top: -2px; 
+    background-color: white; 
+    padding: 1px; 
+    box-shadow: inset 0px 44px 5px -44px rgba(0,0,0,0.45);
+}
+
+.divTable {
+    display: none;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 71%;
+    border-radius: 0.7em;
+    overflow: hidden;
+}
+  
+td, th {
+    border: 1px solid #e7e7e7;
+    padding: 8px;
+}
+  
+tr:nth-child(odd) {
+    background-color: #fffdfd;
+}
+
+th {
+      background-color: rgb(245, 120, 120);
+      color: whitesmoke;
+}
+
+.btnfermer {
+    float: right;
+}
+
+.divSelDossier {
+    height: 20px;
+    width: 80px;
+    margin-left: 14px
+}
+
+.display_flex {
+    display: flex;
+}
+
+.align_items {
+    align-items: center;
+}
+
+.select {
+    background-color: white; 
+    display: none; 
+    justify-content: center; 
+    padding: 1rem 2.2rem 2.1rem; 
+    border-radius: 7px; 
+    box-shadow: 0px 5px 3px -4px rgba(0,0,0,0.45);
+}
+
+.font-size{
+    font-size: 1rem
+}
+
+.flexcolumn {
+    display: inline-block;
+}
+
+.etabli {
+    width: 48%;
+}
